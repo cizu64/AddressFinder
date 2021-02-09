@@ -1,0 +1,48 @@
+body{
+  margin:0 auto;
+  font-family: 'Ubuntu', sans-serif;
+}
+.container{
+  margin: 20px auto;
+  width: 60%;
+  padding: 10px;
+  background-color: #ccc;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 1px 2px 3px 0px #999;  
+}
+
+.container input
+{
+  padding: 15px;
+  border: 1px solid #000;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: large;
+}
+.container input:focus{
+  outline: none;
+  border: 1px solid rgb(133, 48, 48);
+}
+.searchresult{
+  margin: 20px auto;
+  width: 60%;
+  padding: 10px;
+  background-color: #ccc;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 1px 2px 3px 0px #999;  
+  display: none;
+}
+.searchresult p{
+  font-size: large;
+  font-weight: 500;
+}
+.searchresult a{
+  text-decoration: none;
+}
+.searchresult a:hover{
+  text-decoration: wavy;
+  font-weight: bold;
+}
