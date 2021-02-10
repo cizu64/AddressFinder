@@ -64,6 +64,6 @@ body{
   text-decoration: none;
 }
 .searchresult a:hover{
-  text-decoration: wavy;
+  text-decoration: none;
   font-weight: bold;
 }
