@@ -33,8 +33,11 @@ var data =
 //This resource comes from https://getaddress.io/
 //The apikey can be found there. 
 function findByPostCodeInternet(postcode) {
-    var ser = $(".searchresult");
     var txt = $("#txtser");
+    var ser = $("#acclist");
+    ser.text("");
+    ser.css("display", "block");
+    var item = "";
 
     ser.css("display", "block");
     $.ajax({
@@ -49,9 +52,13 @@ function findByPostCodeInternet(postcode) {
             for (var i = 0; i < data.length; i++) {
                 if (txt.val().length < 3) break;
                 //countries += "<p>"+data[i].display_name+"<p>";
-                countries += "<div class='accordion' id='accordionExample'><div class='card'><div class='card-header' id='headingOne'><h2 class='mb-0'><button class='btn btn-link' type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne'>" + data[i].display_name + "</button></h2></div><div id='collapseOne' class='collapse show' aria-labelledby='headingOne' data-parent='#accordionExample'><div class='card-body'><p class=''>More information goes here</p></div></div></div></div>";
+                // countries += "<div class='accordion' id='accordionExample'><div class='card'><div class='card-header' id='headingOne'><h2 class='mb-0'><button class='btn btn-link' type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne'>" + data[i].display_name + "</button></h2></div><div id='collapseOne' class='collapse show' aria-labelledby='headingOne' data-parent='#accordionExample'><div class='card-body'><p class=''>More information goes here</p></div></div></div></div>";
+
+                var heading = "heading" + ii;
+                var collapse = "collapse" + ii;
+
+                ser.append("<div class='card'><div class='card-header' id='" + heading + "'><h2 class='mb-0'><button class='btn btn-link' type='button' data-toggle='collapse' data-target='#" + collapse + "' aria-expanded='true' aria-controls='" + collapse + "'>" + data[i].display_name + "</button></h2></div><div id='" + collapse + "' class='collapse' aria-labelledby='" + heading + "' data-parent='#acclist'><div class='card-body'><p class=''>" + data[i].display_name + "</p></div></div></div>");
             }
-            ser.append(countries);
         }
     });
 }
