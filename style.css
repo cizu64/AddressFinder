@@ -35,9 +35,30 @@ body{
   box-shadow: 1px 2px 3px 0px #999;  
   display: none;
 }
+#acclist{
+  margin: 20px auto;
+  width: 60%;
+  padding: 10px;
+  background-color: #ccc;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 1px 2px 3px 0px #999;  
+  display: none;
+}
+#acclist p{
+  font-size: large;
+  font-weight: 500;
+}
 .searchresult p{
   font-size: large;
   font-weight: 500;
+}
+#acclist a{
+  text-decoration: none;
+}
+#acclist a:hover{
+  text-decoration: wavy;
+  font-weight: bold;
 }
 .searchresult a{
   text-decoration: none;
